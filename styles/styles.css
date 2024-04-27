@@ -23,7 +23,9 @@ body {
 }
 
 /* TO DO: all elements with the .flex class applied are to be made into flex-box containers. */
-
+.flex{
+    display: flex;
+}
 
  
 
@@ -41,10 +43,40 @@ body {
         - change the text colour to white, and 
         - change the cursor to pointer.
 */
+a{
+    text-decoration: none;
+    color: black;
+    align-items: center;
+}
 
+main a:hover, footer a:hover{
+    text-decoration: underline;
+}
 
+h1{
+    font-size: 48px;
+    margin: auto;
+}
 
-
+h2{
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+.large-text {
+    font-size: 24px;
+}
+.fake-button{
+    line-height: 3;
+    border: 1px solid black;
+    background-color: #E5AF42;
+    text-align: center;
+}
+.fake-button:hover, .blue-hover:hover{
+    text-decoration: underline;
+    background-color: #4278e5;
+    color: white;
+    cursor: pointer;
+}
 
 
 
@@ -59,22 +91,64 @@ body {
     - the footer will be 60px tall, have a font-weight of 200, and the text within will be centered vertically and horizontally.
 */
 
+header,footer{
+    background-color: #E5AF42;
+}
 
+header{
+    height: 150px;
+    margin-bottom: 25px;
+}
 
+header img{
+    width: 100px;
+    height: 100px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+}
+
+footer{
+    padding: 20px 20px 15px 20px;
+    margin-top: 50px;
+    height: 60px;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 30px;
+}
 
 
 
 /************* index page *************/
 
 /* TO-DO: 
-    - this is a 2-column layout: text on the left, and an image on the right. The image will be 300px wide, with 25px between it and the text column, which takes up the remaining space. The image will also have 50px of space below.
+    - this is a 2-column layout: text on the left, and an image on the right. The image will be 300px wide, 
+        with 25px between it and the text column, which takes up the remaining space. The image will also have 50px of space below.
     - the h2 on this page will have a line-height equal to the font size.
     - each paragraph on this page will have 12px of space beneath it.
     - each fake-button on this page will be 250px wide with 150px of space between them.
     - the pair of fake-buttons will be centered on the page. HINT: can calculate the required margin to make them appear to be centered.
 */
+.index img{
+    width: 300px;
+    margin-left: 25px;
+    margin-bottom: 50px;
+}
+.about-us h2{
+    line-height: 36px;
+}
 
+.about-us p{
+    margin-bottom: 12px;
+}
 
+.index .fake-button{
+    width: 250px;
+    margin: 0 75px;
+}
+.index .flex{
+    justify-content: center;
+}
 
 
 
@@ -85,7 +159,8 @@ body {
     - the contents of the booking-page will be 600px wide, and all content centered within the available space.
     - text will have a size of 18px.
     - there will be 12px of space below the day-selectors, and 20px of space between each list item. List items are 60px wide.
-    - List items & the small-button elements will have a solid black border that is 1px wide. Small-buttons will also have 5px of space between the border and the content.
+    - List items & the small-button elements will have a solid black border that is 1px wide. 
+        Small-buttons will also have 5px of space between the border and the content.
     - items tagged with .top-margin will have 24 px of space above, and 12px of space below.
     - the "clear days" button will be 200px wide.
     - any element tagged with the .clicked class will turn mustard yellow. **This will be very important for your JavaScript.**
@@ -93,14 +168,43 @@ body {
 
 */
 
+.booking-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+}
 
+.day-selector{
+    margin-bottom: 12px;
+}
+.day-selector li{
+    margin: 0 10px;
+    width: 60px;
+}
 
+.day-selector li, .small-button{
+    border: 1px solid black;
+}
 
+.small-button{
+    padding: 5px;
+}
 
+.top-margin{
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
 
-
-
-
+#clear-button{
+    width: 200px;
+}
+.clicked{
+    background-color: #E5AF42;
+}
 
 
 
